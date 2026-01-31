@@ -4,6 +4,7 @@ import { resolve } from "path";
 console.log("Vite config loaded");
 
 export default defineConfig({
+    base: "/unscene-entertainment-site/",
     build: {
         rollupOptions: {
         input: {
