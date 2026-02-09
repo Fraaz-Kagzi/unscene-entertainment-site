@@ -1,35 +1,113 @@
+<!-- contact.html -->
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact – UNSCENE Entertainment</title>
+
+        <link rel="icon" type="image/png" href="./UE_Favicon.png" />
+        <link rel="apple-touch-icon" href="./UE_Favicon_Circle.png" />
+
+        <!-- Client fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Story+Script&display=swap"
+        rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./style.css" />
+    </head>
 
     <body>
         <header id="site-nav"></header>
 
-        <main class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>bla bla bla.</p>
+        <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+            <div class="hero-inner">
+                <div class="kicker">CONTACT</div>
+                <h1 class="hero-title">Beyond the Door</h1>
 
-            <div class="grid cols-2">
-            <div class="card">
-                <h3>Email</h3>
-                <p class="small">General enquiries, collaborations.</p>
-                <p><a href="mailto:hello@unscene-entertainment.com">PutYour@Email.com</a></p>
+                <div class="card" style="margin-top: 14px;">
+                <p>
+                    Follow UNSCENE Entertainment as our work takes shape, from early development and behind-the-scenes process to finished productions and collaborations.
+
+                </p>
+                <p style="margin: 10px 0 0; color: rgba(230,230,230,0.92);">
+                    <strong>Instagram · YouTube · Facebook · TikTok</strong>
+                </p>
+                <p style="margin: 6px 0 0;">
+                    <strong>@UNSCENE_Entertainment</strong>
+                </p>
+                </div>
+
+                <div class="actions" style="margin-top: 16px;">
+                <a class="btn" href="#step-inside">Step inside</a>
+                <a class="btn ghost" href="./work.html">View work</a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- STEP INSIDE -->
+        <section class="section alt" id="step-inside">
+            <div class="container">
+            <div class="section-head">
+                <h2>Step Inside</h2>
+            </div>
+
+            <div class="grid cols-2" style="margin-top: 16px;">
+                <!-- CONTACT CTA -->
+                <div class="card">
+                <h3>Let's talk</h3>
+                <p>
+                    We are currently in early development and welcome conversations with artists, collaborators, venues, and partners who share our values and vision.
+                        UNSCENE Entertainment…open the door to the unseen.
+
+                </p>
+
                 <div class="hr"></div>
-            </div>
 
-            <div class="card">
-                <h3>Social</h3>
-                <p class="small">Add platforms:</p>
-                <p><a href="#" target="_blank" rel="noreferrer">Instagram</a></p>
-                <p><a href="#" target="_blank" rel="noreferrer">YouTube</a></p>
-                <p><a href="#" target="_blank" rel="noreferrer">TikTok</a></p>
-            </div>
-            </div>
-        </div>
+                <p class="small">Email:</p>
+                <p>
+                    <a href="mailto:info@unsceneentertainment.com">info@unsceneentertainment.com</a>
+                </p>
+                </div>
+
+                <!-- SOCIAL LINKS -->
+                <div class="card">
+                    <h3>Follow</h3>
+                    <p class="small">Find updates, process, collaborations, and releases:</p>
+
+                    <div class="hr"></div>
+
+                    <div class="social-icons">
+                        <a href="https://www.youtube.com/@UNSCENE.Entertainment" target="_blank" rel="noreferrer" aria-label="YouTube">
+                            <img src="./icons/youtube.png" alt="YouTube">
+                        </a>
+
+                        <a href="https://www.instagram.com/unscene_entertainment" target="_blank" rel="noreferrer" aria-label="Instagram">
+                            <img src="./icons/instagram.png" alt="Instagram">
+                        </a>
+
+                        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook">
+                            <img src="./icons/facebook.png" alt="Facebook">
+                        </a>
+
+                        <a href="https://www.tiktok.com/@unscene_entertainment" target="_blank" rel="noreferrer" aria-label="TikTok">
+                            <img src="./icons/tiktok.png" alt="TikTok">
+                        </a>
+                    </div>
+                </div>
+
+        </section>
         </main>
 
         <div id="site-footer"></div>
 
-        <script type="module" src="./src/pages/contact.js"></script>
+        <script type="module" src="/src/pages/contact.js"></script>
     </body>
 </html>

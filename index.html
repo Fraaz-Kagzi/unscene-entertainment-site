@@ -1,19 +1,23 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UnsceNE Entertainment</title>
+    <title>UNSCENE Entertainment</title>
 
     <link rel="icon" type="image/png" href="./UE_Favicon.png" />
     <link rel="apple-touch-icon" href="./UE_Favicon_Circle.png" />
 
+    <!-- Client fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;600;750&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Story+Script&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
@@ -21,42 +25,25 @@
     <header id="site-nav"></header>
 
     <main>
-      <!-- HERO -->
+      <!-- HERO / CATCH LINE -->
       <section class="hero hero-home">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <div class="kicker">BLA - BLA - BLA - BLA</div>
-
-            <h1 class="hero-title">CATCH LINE.</h1>
-
-            <p class="hero-lead">
-              bla bla bla bla bla bla bla - bla bla bla bla bla bla bla.
-            </p>
+            <div class="kicker">CATCH LINE</div>
+            <h1 class="hero-title">Open the door to the unseen…</h1>
 
             <div class="actions">
-              <a class="btn" href="./work.html">See our work</a>
-              <a class="btn ghost" href="./contact.html">Contact us</a>
-            </div>
-
-            <div class="hero-metrics">
-              <div class="metric">
-                <div class="metric-num">BLA</div>
-                <div class="metric-label">Projects</div>
-              </div>
-              <div class="metric">
-                <div class="metric-num">BLA</div>
-                <div class="metric-label">Collaborations</div>
-              </div>
-              <div class="metric">
-                <div class="metric-num">BLA</div>
-                <div class="metric-label">Screenings / Events</div>
-              </div>
+              <a class="btn" href="./work.html">Explore the work</a>
+              <a class="btn ghost" href="./contact.html">Step inside</a>
             </div>
           </div>
 
           <aside class="hero-panel card">
-            <h3>Now showing</h3>
-            <p>bla bla bla bla bla bla bla bla bla.</p>
+            <h3>Step Inside</h3>
+            <p class="panel-copy">
+              We are currently in early development and welcome conversations with artists, collaborators, venues, and
+              partners who share our values and vision.
+            </p>
 
             <div class="hr"></div>
 
@@ -64,24 +51,24 @@
               <div class="mini-item">
                 <div class="dot"></div>
                 <div>
-                  <div class="mini-title">In development</div>
-                  <div class="mini-sub">bla bla bla bla</div>
+                  <div class="mini-title">Collaboration</div>
+                  <div class="mini-sub">Artists • Venues • Partners</div>
                 </div>
               </div>
 
               <div class="mini-item">
                 <div class="dot"></div>
                 <div>
-                  <div class="mini-title">In production</div>
-                  <div class="mini-sub">bla bla bla bla</div>
+                  <div class="mini-title">Contact</div>
+                  <div class="mini-sub">Open a conversation</div>
                 </div>
               </div>
 
               <div class="mini-item">
                 <div class="dot"></div>
                 <div>
-                  <div class="mini-title">Live / touring</div>
-                  <div class="mini-sub">bla bla bla bla</div>
+                  <div class="mini-title">Next steps</div>
+                  <div class="mini-sub">See our plans below</div>
                 </div>
               </div>
             </div>
@@ -89,44 +76,88 @@
         </div>
       </section>
 
-      <!-- FEATURED WORK -->
+      <!-- BEHIND THE DOOR -->
+      <section class="section">
+        <div class="container">
+          <h2>Behind the Door</h2>
+
+          <div class="grid cols-2" style="margin-top: 16px">
+            <div class="card">
+              <p>
+                UNSCENE Entertainment is a creative production company based in Blackburn, Lancashire, founded in 2025 by
+                Furqan Kagzi and Douy Singsamran.
+              </p>
+
+              <p>
+                We create original stories rooted in atmosphere, emotion, and the unseen - work that lingers long after
+                the lights fade. Drawn to horror, folklore, and human fragility, UNSCENE exists to explore the spaces
+                between history and imagination, memory and myth.
+              </p>
+            </div>
+
+            <div class="card">
+              <p>
+                Our projects are inspired by Lancashire’s culture, landscapes, and hidden histories. We believe regional
+                stories carry universal weight, and that ambitious, professional work can be created beyond traditional
+                creative centres.
+              </p>
+
+              <p>
+                From stage to page to screen, we transform local heritage into immersive experiences that speak to
+                audiences everywhere.
+              </p>
+
+              <div class="hr"></div>
+
+              <p style="margin: 0; color: rgba(230,230,230,0.92);">
+                <strong>UNSCENE Entertainment… open the door to the unseen.</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT COMES NEXT -->
       <section class="section alt">
         <div class="container">
           <div class="section-head">
-            <h2>Featured work</h2>
-            <a class="btn ghost small" href="./work.html">View all projects</a>
+            <h2>What Comes Next</h2>
+            <a class="btn ghost small" href="./work.html">View work</a>
           </div>
 
-          <div class="featured-row">
-            <article class="featured-card card">
-              <div class="featured-top">
-                <div class="badge">Short film</div>
-                <div class="badge ghost">In development</div>
-              </div>
-              <h3>Project title</h3>
-              <p>bla bla bla bla bla bla bla.</p>
-              <div class="featured-bottom"></div>
-            </article>
+          <div class="grid cols-2" style="margin-top: 16px">
+            <div class="card">
+              <h3>Current focus</h3>
+              <p>
+                Over the coming years, UNSCENE will focus on developing and producing
+                <strong>Echoes of the Past: The Veil</strong>, while building a sustainable creative pipeline that
+                supports future projects, collaborations, and opportunities for regional artists.
+              </p>
+            </div>
 
-            <article class="featured-card card">
-              <div class="featured-top">
-                <div class="badge">Animation</div>
-                <div class="badge ghost">In production</div>
-              </div>
-              <h3>Project title</h3>
-              <p>bla bla bla bla bla bla bla.</p>
-              <div class="featured-bottom"></div>
-            </article>
+            <div class="card">
+              <h3>Long-term vision</h3>
+              <p>
+                Our long-term aim is to create work that lives beyond a single production, expanding across stage, page,
+                and digital platforms, and contributing to a lasting creative legacy in the North of England.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <article class="featured-card card">
-              <div class="featured-top">
-                <div class="badge">Live experience</div>
-                <div class="badge ghost">Planning</div>
-              </div>
-              <h3>Project title</h3>
-              <p>bla bla bla bla bla bla bla.</p>
-              <div class="featured-bottom"></div>
-            </article>
+      <!-- STEP INSIDE (CTA) -->
+      <section class="section">
+        <div class="container">
+          <div class="card cta-card">
+            <div>
+              <h3 class="cta-title">Step Inside</h3>
+              <p class="muted">
+                We are currently in early development and welcome conversations with artists, collaborators, venues, and
+                partners who share our values and vision.
+              </p>
+            </div>
+            <a class="btn" href="./contact.html">Get in touch</a>
           </div>
         </div>
       </section>
@@ -135,6 +166,6 @@
     <!-- injected footer goes here -->
     <div id="site-footer"></div>
 
-    <script type="module" src="./src/pages/home.js"></script>
+    <script type="module" src="/src/pages/home.js"></script>
   </body>
 </html>
