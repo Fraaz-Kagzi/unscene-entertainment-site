@@ -8,52 +8,44 @@
         <link rel="icon" type="image/png" href="./UE_Favicon.png" />
         <link rel="apple-touch-icon" href="./UE_Favicon_Circle.png" />
 
+        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Story+Script&family=Zalando+Sans+Expanded:wght@200..900&display=swap"
         rel="stylesheet"
         />
 
-        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./styles.css" />
     </head>
 
     <body>
         <header id="site-nav"></header>
 
         <main>
-        <section class="page-hero page-hero--work">
+        <!-- SECTION 1 -->
+        <section class="hero">
             <div class="container">
             <p class="kicker">WORK</p>
             <h1 class="hero-title">The Work We Bring to Light</h1>
-            <p class="hero-lead">
-                UNSCENE develops and produces original theatrical, literary, and visual work shaped by strong storytelling, distinctive visual identity, and emotional resonance
-            </p>
-            </div>
-        </section>
 
-        <section class="section alt">
-            <div class="container">
-            <div class="section-head">
-                <div class="card">
-                <h3>What we explore</h3>
+            <div class="card" style="margin-top: 14px;">
                 <p>
-                    Our projects often explore themes of love, loss, belief, identity, and legacy, using genre, particularly horror and gothic drama, as a gateway to human connection.
+                UNSCENE develops and produces original theatrical, literary, and visual work built on strong storytelling and distinctive visual identity.
                 </p>
-                </div>
-<!--
-                <div class="card">
-                <h3>How we build</h3>
+
                 <p>
-                    Story-led, atmosphere-forward work — designed to linger, question, and stay with you.
+                We return again and again to themes of love, loss, belief, identity, and legacy. Genre, particularly horror and gothic drama, becomes a doorway into human connection.
                 </p>
-                </div>
-                -->
+
+                <p>
+                We create for audiences who are drawn to atmosphere and emotion. For those who value stories that linger, question, and stay with them long after the experience ends.
+                </p>
             </div>
             </div>
         </section>
 
-        <!-- FLAGSHIP -->
+        <!-- FLAGSHIP PRODUCTION -->
         <section class="section">
             <div class="container">
             <div class="section-head">
@@ -62,13 +54,9 @@
 
             <div class="flagship card">
                 <h3 class="flagship-title">Echoes of the Past: The Veil</h3>
-                <p class="muted">
-                Our flagship production, <strong>Echoes of the Past: The Veil</strong>, is a haunting historical drama blending
-                mystery, romance, and atmosphere into a single immersive world.
-                </p>
-                <p class="muted">
-                The project forms the foundation of UNSCENE’s wider creative ecosystem, expanding into music, publishing,
-                and digital storytelling, and supporting our long-term sustainability as a creative company.
+
+                <p style="margin-top: 12px;">
+                Our flagship production, Echoes of the Past: The Veil, is a haunting historical drama that blends mystery, romance, and atmosphere into a single immersive world. It forms the foundation of our wider creative ecosystem, expanding into music, publishing, and digital storytelling.
                 </p>
 
                 <div class="hr"></div>
@@ -79,7 +67,6 @@
                 </p>
 
                 <div class="wip-grid">
-                <!-- Update src paths to match your actual filenames (prefer no spaces) -->
                 <figure class="wip">
                     <img src="./work/chapter-1-sketch.jpg" alt="Chapter 1 sketch" />
                 </figure>
@@ -107,28 +94,42 @@
                 <figure class="wip">
                     <img src="./work/emma-thumbnail-03.jpg" alt="Emma thumbnail sheet 03" />
                 </figure>
-<!--
-                <figure class="wip wip--tall">
-                    <img src="./work/sarah-sketch.jpg" alt="Sarah sketch character concept" />
-                </figure>
                 </div>
             </div>
             </div>
-            -->
         </section>
 
-        <!-- AUDIENCE -->
+        <!-- NEW PROJECT: TEASER / TRAILER CONCEPT -->
         <section class="section alt">
             <div class="container">
             <div class="section-head">
-                <h2>Our Audience</h2>
+                <h2>Concept Teaser / Trailer</h2>
             </div>
 
-            <div class="prose card">
-                <p>
-                Our work is for audiences drawn to atmosphere, emotion, and story-led experiences, those who value art that lingers,
-                questions, and stays with you.
+            <div class="card">
+                <h3>Teaser / Trailer Concept</h3>
+                <p class="muted">
+                A concept for the company&rsquo;s teaser/trailer.
                 </p>
+
+                <div class="hr"></div>
+
+                <div class="media-grid">
+                <!-- Video -->
+                <figure class="media-item">
+                    <video class="media-video" controls playsinline preload="metadata" poster="./work/Render04.png">
+                        <source src="./work/Hallway03.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption class="small muted">Hallway concept clip</figcaption>
+                </figure>
+
+                <!-- Still render -->
+                <figure class="media-item">
+                    <img class="media-image" src="./work/Render04.png" alt="Teaser concept render" loading="lazy" />
+                    <figcaption class="small muted">Teaser concept render</figcaption>
+                </figure>
+                </div>
             </div>
             </div>
         </section>

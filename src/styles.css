@@ -1,13 +1,21 @@
 /* =========================
    UNSCENE — BASIC SITE UI
+   Brand compliance (Google Fonts):
+   - Main font (headings): Bebas Neue
+   - Secondary font (body): Zalando Sans Expanded (Light)
+   - Accent font: Story Script
+   - Spacing: 2pt letter-spacing
+   - Palette: e6e6e6 / 999999 / ff4444 / 333333
    ========================= */
 
 :root {
-  --c-light: #e6e6e6;
-  --c-mid: #999999;
-  --c-red: #ff4444;
-  --c-dark: #333333;
+  /* Brand palette (exact) */
+  --c-light: #e6e6e6; /* e6e6e6ff */
+  --c-mid: #999999;   /* 999999ff */
+  --c-red: #ff4444;   /* ff4444ff */
+  --c-dark: #333333;  /* 333333ff */
 
+  /* UI derived */
   --bg: #07080a;
   --bg2: #0b0d12;
   --panel: rgba(255, 255, 255, 0.04);
@@ -22,10 +30,13 @@
   --radius2: 26px;
   --container: min(1100px, 92vw);
 
+  /* Fonts per document */
   --font-head: "Bebas Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  --font-body: "Story Script", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-body: "Zalando Sans Expanded", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-accent: "Story Script", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 
-  --track-2pt: 2.66px;
+  /* Spacing per document */
+  --track: 2pt;
 
   --logo-url: none;
 }
@@ -41,8 +52,10 @@ body {
     radial-gradient(700px 450px at 90% 0%, rgba(230, 230, 230, 0.06), transparent 55%),
     linear-gradient(180deg, var(--bg), var(--bg2));
   font-family: var(--font-body);
-  letter-spacing: var(--track-2pt);
+  letter-spacing: var(--track);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body::before{
@@ -83,9 +96,10 @@ a:hover { text-decoration: underline; }
 
 .container { width: var(--container); margin: 0 auto; }
 
+/* Headings: Bebas Neue */
 h1, h2, h3 {
   font-family: var(--font-head);
-  letter-spacing: var(--track-2pt);
+  letter-spacing: var(--track);
   text-transform: uppercase;
   margin: 0;
 }
@@ -94,12 +108,22 @@ h1 { font-size: clamp(2.2rem, 3.3vw, 3.4rem); line-height: 1.02; }
 h2 { font-size: clamp(1.7rem, 2.4vw, 2.2rem); margin: 0 0 10px; }
 h3 { font-size: 1.1rem; margin: 0 0 8px; }
 
+/* Body: Zalando Sans Expanded Light */
 p {
   margin: 0 0 12px;
   color: var(--muted);
   line-height: 1.7;
   font-family: var(--font-body);
-  letter-spacing: var(--track-2pt);
+  letter-spacing: var(--track);
+  font-weight: 300; /* “Light” */
+}
+
+/* Accent utility: Story Script */
+.accent {
+  font-family: var(--font-accent);
+  letter-spacing: var(--track);
+  text-transform: none;
+  font-weight: 400;
 }
 
 .muted { color: var(--muted); }
@@ -111,7 +135,6 @@ p {
 }
 
 /* NAV */
-
 .site-header {
   position: sticky;
   top: 0;
@@ -129,10 +152,7 @@ p {
   gap: 18px;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-}
+.brand { display: flex; align-items: center; }
 
 .brand-logo {
   height: 48px;
@@ -165,7 +185,7 @@ p {
   border-radius: 999px;
   border: 1px solid transparent;
   font-family: var(--font-head);
-  letter-spacing: var(--track-2pt);
+  letter-spacing: var(--track);
   text-transform: uppercase;
 }
 
@@ -183,7 +203,6 @@ p {
 }
 
 /* BUTTONS / CARDS */
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -195,7 +214,7 @@ p {
   background: linear-gradient(180deg, rgba(255,68,68,.95), rgba(255,68,68,.70));
   box-shadow: var(--shadow);
   font-family: var(--font-head);
-  letter-spacing: var(--track-2pt);
+  letter-spacing: var(--track);
   text-transform: uppercase;
 }
 
@@ -223,7 +242,6 @@ p {
 .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
 
 /* HERO */
-
 .hero {
   padding: 54px 0 34px;
   position: relative;
@@ -256,7 +274,7 @@ p {
 
 .kicker {
   color: rgba(230,230,230,.72);
-  letter-spacing: var(--track-2pt);
+  letter-spacing: var(--track);
   text-transform: uppercase;
   font-family: var(--font-head);
   font-size: 0.9rem;
@@ -271,7 +289,6 @@ p {
 }
 
 /* SECTIONS */
-
 .section { padding: 42px 0; }
 
 .section.alt {
@@ -288,7 +305,6 @@ p {
 }
 
 /* FOOTER */
-
 .footer {
   border-top: 1px solid var(--border);
   padding: 22px 0;
@@ -304,268 +320,7 @@ p {
 
 .small { font-size: 0.95rem; color: rgba(153,153,153,0.95); }
 
-/* WORK LIST */
-
-.work-list{
-  display: grid;
-  gap: 18px;
-  margin-top: 18px;
-}
-
-.work-item{ padding: 18px; }
-
-.work-top{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap: 16px;
-}
-
-.work-title{ margin: 0; }
-
-.work-subtitle{
-  margin: 6px 0 0;
-  color: rgba(153,153,153,0.92);
-}
-
-.work-body{
-  margin-top: 14px;
-  display:grid;
-  grid-template-columns: 1.2fr 0.9fr 0.9fr;
-  gap: 14px;
-}
-
-.label{
-  margin: 0 0 8px;
-  color: rgba(153,153,153,0.92);
-  font-size: 0.9rem;
-  letter-spacing: var(--track-2pt);
-  text-transform: uppercase;
-  font-family: var(--font-head);
-}
-
-.blank{
-  height: 72px;
-  border-radius: 14px;
-  border: 1px dashed rgba(153,153,153,0.35);
-  background: rgba(230,230,230,0.02);
-}
-
-@media (max-width: 900px){
-  .work-top{ flex-direction: column; align-items: flex-start; }
-  .work-body{ grid-template-columns: 1fr; }
-}
-
-/* TEAM */
-
-.team-stack{
-  display: grid;
-  gap: 16px;
-  margin-top: 18px;
-}
-
-.team-member{
-  padding: 18px;
-}
-
-.team-head{
-  display: grid;
-  grid-template-columns: 84px 1fr;
-  gap: 16px;
-  align-items: start;
-}
-
-.team-meta .team-name{
-  margin: 0;
-}
-
-.team-meta .team-role{
-  margin: 6px 0 6px;
-  color: rgba(230,230,230,0.70);
-  font-weight: 650;
-}
-
-.team-meta .team-bio{
-  margin: 0;
-  color: rgba(153,153,153,0.95);
-}
-
-.team-longbio{
-  margin-top: 14px;
-  max-width: 85ch;
-  color: rgba(230,230,230,0.78);
-}
-
-.team-longbio p{
-  margin: 0 0 12px;
-  line-height: 1.75;
-}
-
-@media (max-width: 900px){
-  .team-head{
-    grid-template-columns: 64px 1fr;
-  }
-}
-
-/* HOME PAGE */
-
-.hero-home{ padding: 56px 0 34px; }
-
-.hero-grid{
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 22px;
-  align-items: start;
-}
-
-.hero-copy{ max-width: 62ch; }
-
-.hero-title{
-  margin: 0;
-  font-size: clamp(2.4rem, 3.6vw, 3.8rem);
-  line-height: 1.02;
-}
-
-.hero-lead{
-  margin-top: 10px;
-  color: rgba(153,153,153,0.92);
-  font-size: 1.08rem;
-}
-
-.hero-lead-2{
-  margin-top: 12px;
-  max-width: 60ch;
-}
-
-.hero-metrics{
-  margin-top: 18px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.metric{
-  border: 1px solid rgba(230,230,230,0.10);
-  background: rgba(230,230,230,0.03);
-  border-radius: 16px;
-  padding: 12px;
-}
-
-.metric-num{
-  font-family: var(--font-head);
-  letter-spacing: var(--track-2pt);
-  font-size: 1.2rem;
-}
-
-.metric-label{
-  margin-top: 6px;
-  color: rgba(153,153,153,0.92);
-  font-size: 0.95rem;
-}
-
-.hero-panel{ padding: 18px; }
-
-.panel-copy strong{
-  font-family: var(--font-head);
-  letter-spacing: var(--track-2pt);
-  text-transform: uppercase;
-  color: var(--text);
-}
-
-.mini-list{ display: grid; gap: 12px; }
-
-.mini-item{
-  display: grid;
-  grid-template-columns: 14px 1fr;
-  gap: 10px;
-  align-items: start;
-}
-
-.dot{
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: rgba(255,68,68,0.95);
-  margin-top: 6px;
-  box-shadow: 0 0 14px rgba(255,68,68,0.35);
-}
-
-.mini-title{
-  font-family: var(--font-head);
-  letter-spacing: var(--track-2pt);
-  text-transform: uppercase;
-}
-
-.mini-sub{
-  color: rgba(153,153,153,0.92);
-  font-size: 0.95rem;
-  margin-top: 4px;
-}
-
-/* featured grid */
-
-.featured-row{
-  margin-top: 14px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-
-.featured-row-4{
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.featured-card{
-  position: relative;
-  overflow: hidden;
-}
-
-.featured-card::before{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  background: radial-gradient(400px 140px at 20% 0%, rgba(255,68,68,0.14), transparent 70%);
-  pointer-events:none;
-  opacity: 0.9;
-}
-
-.access-card{
-  margin-top: 18px;
-}
-
-.cta-card{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  flex-wrap:wrap;
-}
-
-.cta-title{ margin: 0; }
-
-@media (max-width: 900px){
-  .hero-grid{ grid-template-columns: 1fr; }
-  .hero-metrics{ grid-template-columns: 1fr; }
-  .featured-row{ grid-template-columns: 1fr; }
-  .featured-row-4{ grid-template-columns: 1fr; }
-
-  .hero::before{
-    background-position: right -160px top 40px;
-    background-size: 260px auto;
-    opacity: 0.02;
-  }
-
-  body::after{
-    background-position: 50% -80px, 70% 90px;
-    background-size: auto, 300px auto;
-    opacity: 0.04;
-  }
-}
-
-/* ======================================================
-   WORK – WIP IMAGES (NORMAL ASPECT RATIO)
-   ====================================================== */
-
+/* WORK – WIP IMAGES */
 .wip-grid{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -573,31 +328,22 @@ p {
   margin-top: 16px;
 }
 
-.wip{
-  margin: 0;
-}
+.wip{ margin: 0; }
 
 .wip img{
   width: 100%;
-  height: auto;              /* <-- THIS is the key change */
+  height: auto;
   display: block;
-  object-fit: contain;      /* keeps full image visible */
+  object-fit: contain;
   border-radius: 14px;
   border: 1px solid rgba(230,230,230,0.14);
   background: rgba(0,0,0,0.25);
 }
 
-/* you no longer need this */
-.wip--tall img{
-  height: auto;
-}
-/* =========================
-   CONTACT – SOCIAL ICONS
-   ========================= */
-
+/* CONTACT – SOCIAL ICONS */
 .social-icons{
   display: flex;
-  gap: 16px;
+  gap: 22px; /* slightly more space between icons */
   align-items: center;
   flex-wrap: wrap;
 }
@@ -607,19 +353,338 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 6px;
+  padding: 10px; /* increased padding */
   transition: transform 0.15s ease, filter 0.15s ease;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(230,230,230,0.12);
 }
 
 .social-icons a:hover{
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   filter: brightness(1.1);
+  border-color: rgba(255, 68, 68, 0.5);
 }
 
 .social-icons img{
-  width: 42px;
-  height: 42px;
-  object-fit: contain;   /* keeps proper aspect ratio */
+  width: 60px;  /* was 42px */
+  height: 60px; /* was 42px */
+  object-fit: contain;
+  display: block;
+}
+/* =========================
+    HOME – FEATURED WORK AUDIO
+   ========================= */
+
+.featured-work__top{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.featured-work__title{
+  margin: 0;
+}
+
+.featured-work__sub{
+  margin: 6px 0 0;
+}
+
+.featured-work__controls{
+  display: grid;
+  gap: 6px;
+  justify-items: end;
+}
+
+.audio-cta{
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(153,153,153,.35);
+  background: rgba(0,0,0,0.35);
+  color: rgba(230,230,230,0.90);
+
+  font-family: var(--font-head);
+  letter-spacing: var(--track);
+  text-transform: uppercase;
+
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+.audio-cta:hover{ filter: brightness(1.05); }
+
+.audio-cta.is-on{
+  border-color: rgba(255, 68, 68, 0.55);
+  background: rgba(255, 68, 68, 0.12);
+  color: rgba(230,230,230,0.95);
+}
+
+@media (max-width: 900px){
+  .featured-work__controls{
+    justify-items: start;
+  }
+}
+
+/* =========================
+    HOME – LOGO DISPLAY
+   ========================= */
+
+.logo-section{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.logo-display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-display img{
+  width: 100%;
+  max-width: 520px; /* Sensible review-friendly size */
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 30px rgba(0,0,0,0.6));
+}
+
+@media (max-width: 768px){
+  .logo-display img{
+    max-width: 340px;
+  }
+}
+
+
+.team-stack{
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* adjust to 20–32px if needed */
+}
+
+/* =========================
+   WORK – TEASER / TRAILER MEDIA
+   ========================= */
+
+.media-grid{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 14px;
+  margin-top: 14px;
+  align-items: start;
+}
+
+.media-item{
+  margin: 0;
+}
+
+.media-video{
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(230,230,230,0.14);
+  background: rgba(0,0,0,0.25);
   display: block;
 }
 
+.media-image{
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(230,230,230,0.14);
+  background: rgba(0,0,0,0.25);
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 800px){
+  .media-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+  MOBILE RESPONSIVE SAFETY NET
+   ========================= */
+
+/* Prevent overflow from long words/urls */
+* {
+  max-width: 100%;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make buttons wrap nicely */
+.actions {
+  flex-wrap: wrap;
+}
+
+/* Better spacing + readable text on small screens */
+@media (max-width: 900px) {
+  body {
+    letter-spacing: var(--track); /* keep brand spec */
+  }
+
+  .section {
+    padding: 34px 0;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .header-inner {
+    padding: 14px 0;
+  }
+
+  /* If your nav gets cramped */
+  .nav {
+    gap: 10px;
+  }
+
+  .nav a {
+    padding: 9px 10px;
+  }
+}
+
+/* Phone layout fixes */
+@media (max-width: 600px) {
+  /* Force all 2/3-column grids into 1 column */
+  .grid.cols-2,
+  .grid.cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Home hero should always stack */
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  /* Featured work header + audio button stack cleanly */
+  .featured-work__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .featured-work__controls {
+    justify-items: start;
+  }
+
+  /* Make large titles a little less intense */
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  /* Reduce “pill” buttons so they don’t overflow */
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn.small {
+    width: auto;
+  }
+
+  /* Work page image grid feels better with smaller minimums */
+  .wip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Logo section sizing */
+  .logo-display img {
+    max-width: 300px;
+  }
+
+  /* Social icons: keep big, but prevent wrapping weirdly */
+  .social-icons {
+    gap: 16px;
+  }
+
+  .social-icons img {
+    width: 56px;
+    height: 56px;
+  }
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+main, header, footer, section, .container {
+  max-width: 100%;
+  overflow-x: clip;
+}
+/* =========================
+    MOBILE NAV FIX
+   ========================= */
+
+@media (max-width: 600px) {
+
+  /* Make header layout behave on small screens */
+  .header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  /* Bigger logo on mobile */
+  .brand-logo{
+    height: 56px; /* was 48px */
+  }
+
+  /* Keep ALL nav links on one line */
+  .nav{
+    flex-wrap: nowrap !important;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  /* Reduce padding so 4 items fit */
+  .nav a{
+    padding: 8px 8px;
+    font-size: 0.95rem;
+    border-radius: 999px;
+  }
+}
+@media (max-width: 380px) {
+  .nav a{
+    font-size: 0.88rem;
+    padding: 7px 7px;
+  }
+
+  .brand-logo{
+    height: 52px;
+  }
+}

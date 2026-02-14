@@ -9,28 +9,34 @@
     <link rel="icon" type="image/png" href="./UE_Favicon.png" />
     <link rel="apple-touch-icon" href="./UE_Favicon_Circle.png" />
 
-    <!-- Client fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Story+Script&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Story+Script&family=Zalando+Sans+Expanded:wght@200..900&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
-    <!-- injected navbar goes here -->
     <header id="site-nav"></header>
 
+    <audio id="bg-audio" preload="metadata" loop playsinline>
+      <source src="./Crimson.m4a" type="audio/mp4" />
+    </audio>
+
     <main>
-      <!-- HERO / CATCH LINE -->
+      <!-- HERO -->
       <section class="hero hero-home">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <div class="kicker">CATCH LINE</div>
-            <h1 class="hero-title">Open the door to the unseen…</h1>
+            <div class="kicker">CATCH LINE =</div>
+            <h1 class="hero-title accent">
+              Open the door.<br />
+              To the unseen.
+            </h1>
 
             <div class="actions">
               <a class="btn" href="./work.html">Explore the work</a>
@@ -41,38 +47,56 @@
           <aside class="hero-panel card">
             <h3>Step Inside</h3>
             <p class="panel-copy">
-              We are currently in early development and welcome conversations with artists, collaborators, venues, and
-              partners who share our values and vision.
+              We are currently in early development and welcome conversations with artists, collaborators, venues, and partners who share our values and vision.
             </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- NEW LOGO SECTION -->
+      <section class="section logo-section">
+        <div class="container">
+          <div class="logo-display">
+            <img src="./UE_Logo.png" alt="UNSCENE Entertainment logo" />
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED WORK -->
+      <section class="section alt" id="featured-work">
+        <div class="container">
+          <div class="section-head">
+            <h2>The Work We Bring to Light</h2>
+            <a class="btn ghost small" href="./work.html">View work</a>
+          </div>
+
+          <div class="card featured-work" style="margin-top: 16px;">
+            <div class="featured-work__top">
+              <div>
+                <h3 class="featured-work__title">Echoes of the Past: The Veil</h3>
+                <p class="muted featured-work__sub">Flagship Production</p>
+              </div>
+
+              <div class="featured-work__controls">
+                <button
+                  id="audio-toggle"
+                  class="audio-cta"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="Play audio"
+                >
+                  Play audio
+                </button>
+                <div class="small muted">Crimson</div>
+              </div>
+            </div>
 
             <div class="hr"></div>
 
-            <div class="mini-list">
-              <div class="mini-item">
-                <div class="dot"></div>
-                <div>
-                  <div class="mini-title">Collaboration</div>
-                  <div class="mini-sub">Artists • Venues • Partners</div>
-                </div>
-              </div>
-
-              <div class="mini-item">
-                <div class="dot"></div>
-                <div>
-                  <div class="mini-title">Contact</div>
-                  <div class="mini-sub">Open a conversation</div>
-                </div>
-              </div>
-
-              <div class="mini-item">
-                <div class="dot"></div>
-                <div>
-                  <div class="mini-title">Next steps</div>
-                  <div class="mini-sub">See our plans below</div>
-                </div>
-              </div>
-            </div>
-          </aside>
+            <p>
+              Our flagship production, Echoes of the Past: The Veil, is a haunting historical drama that blends mystery, romance, and atmosphere into a single immersive world. It forms the foundation of our wider creative ecosystem, expanding into music, publishing, and digital storytelling.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -83,87 +107,32 @@
 
           <div class="grid cols-2" style="margin-top: 16px">
             <div class="card">
+              <p>UNSCENE Entertainment is a creative production company based in Blackburn, Lancashire.</p>
               <p>
-                UNSCENE Entertainment is a creative production company based in Blackburn, Lancashire, founded in 2025 by
-                Furqan Kagzi and Douy Singsamran.
+                Founded in 2025 by Furqan Kagzi and Douy Singsamran, we create original stories rooted in atmosphere, emotion, and the unseen.
               </p>
-
+              <p>Our work is designed to linger long after the lights fade.</p>
               <p>
-                We create original stories rooted in atmosphere, emotion, and the unseen - work that lingers long after
-                the lights fade. Drawn to horror, folklore, and human fragility, UNSCENE exists to explore the spaces
-                between history and imagination, memory and myth.
+                Drawn to horror, folklore, and human fragility, we explore the space between history and imagination, memory and myth.
               </p>
             </div>
 
             <div class="card">
               <p>
-                Our projects are inspired by Lancashire’s culture, landscapes, and hidden histories. We believe regional
-                stories carry universal weight, and that ambitious, professional work can be created beyond traditional
-                creative centres.
+                Lancashire gives us more than location. It gives us conflict, folklore, architecture, belief systems, and stories that refuse to disappear.
               </p>
-
+              <p>We build from what already exists here and shape it into work that travels far beyond it.</p>
+              <p>Ambitious work does not need to come from traditional creative centres to matter.</p>
               <p>
-                From stage to page to screen, we transform local heritage into immersive experiences that speak to
-                audiences everywhere.
-              </p>
-
-              <div class="hr"></div>
-
-              <p style="margin: 0; color: rgba(230,230,230,0.92);">
-                <strong>UNSCENE Entertainment… open the door to the unseen.</strong>
+                From stage to page to screen, we transform local heritage into immersive experiences that resonate far beyond where they began.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- WHAT COMES NEXT -->
-      <section class="section alt">
-        <div class="container">
-          <div class="section-head">
-            <h2>What Comes Next</h2>
-            <a class="btn ghost small" href="./work.html">View work</a>
-          </div>
-
-          <div class="grid cols-2" style="margin-top: 16px">
-            <div class="card">
-              <h3>Current focus</h3>
-              <p>
-                Over the coming years, UNSCENE will focus on developing and producing
-                <strong>Echoes of the Past: The Veil</strong>, while building a sustainable creative pipeline that
-                supports future projects, collaborations, and opportunities for regional artists.
-              </p>
-            </div>
-
-            <div class="card">
-              <h3>Long-term vision</h3>
-              <p>
-                Our long-term aim is to create work that lives beyond a single production, expanding across stage, page,
-                and digital platforms, and contributing to a lasting creative legacy in the North of England.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- STEP INSIDE (CTA) -->
-      <section class="section">
-        <div class="container">
-          <div class="card cta-card">
-            <div>
-              <h3 class="cta-title">Step Inside</h3>
-              <p class="muted">
-                We are currently in early development and welcome conversations with artists, collaborators, venues, and
-                partners who share our values and vision.
-              </p>
-            </div>
-            <a class="btn" href="./contact.html">Get in touch</a>
-          </div>
-        </div>
-      </section>
     </main>
 
-    <!-- injected footer goes here -->
     <div id="site-footer"></div>
 
     <script type="module" src="/src/pages/home.js"></script>
